@@ -1,0 +1,12 @@
+<div class="question mb-2">
+  <div class="card">
+    <div class="card-header">
+      {{ question.text }}
+      <button class="btn btn-link" (click)="question.hide = !question.hide"><span class="small">{{ question.hide ? 'Show' : 'Hide' }}</span></button> | 
+      <button class="btn btn-link" (click)="removeQuestion(question)"><span class="small">Remove</span></button>
+    </div>
+    <div class="card-body" [hidden]="question.hide">
+      <p class="card-text"> {{ question.answer }}</p>
+    </div>
+  </div>
+</div>
